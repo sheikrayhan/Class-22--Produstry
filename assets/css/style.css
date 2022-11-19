@@ -1,0 +1,332 @@
+/*
+Template Name: 
+Author: 
+Version: 1.0.0
+Author URL: 
+UI Designer:
+Description: 
+
+Table Of Content
+========================
+1. Header Section 
+      1.1) Top Bar
+      1.2) NAv Bar
+2. Banner Section
+3. Service Section 
+
+*/
+
+/* Common Css Start */
+:root{
+   --primaryColor: #ffca36;
+   --secondaryColor:#353535;
+   --primaryWhite:#ffff;
+   --secondaryWhite:#dddddd;
+   --textColor:#555555;
+}
+body{
+   font-family: 'Roboto', sans-serif;
+   color: var(--textColor);
+}
+h1,h2,h3,h4,h5,h6{
+   color: var(--secondaryColor);
+}
+h1,h2,h3,h4,h5,h6,
+p,
+ul,ol,
+span,
+small{
+   margin: 0;
+   padding: 0;
+}
+ol,ul{
+   list-style-type: none;
+}
+a,a:hover{
+   text-decoration: none;
+   display: inline-block;
+}
+/* //Common Css End */
+
+/* Header Section CSS Start */
+#header #topBar{
+   background: var(--primaryColor);
+}
+#header #topBar .topbar_left p{
+   color: var(--secondaryColor);
+   font-size: 14px;
+}
+#header #topBar .topbar_mid{
+   background: var(--secondaryColor);
+   transform: skew(-35deg);
+   padding: 10px;
+}
+#header #topBar .topbar_mid p{
+   transform: skew(35deg);
+   text-align: center;
+   color: var(--primaryWhite);
+   font-size: 14px;
+}
+#header #topBar .topbar_right ul li a i{
+   width: 24px;
+   height: 24px;
+   text-align: center;
+   line-height: 24px;
+   /* border: 1px solid black; */
+}
+#header #topBar .topbar_right ul{
+   margin-left: 5px;
+}
+#header #topBar .topbar_right ul li{
+   position: relative;
+   line-height: 0;
+   margin-right: 10px;
+}
+#header #topBar .topbar_right ul li::after{
+   content: '';
+   position: absolute;
+   height: 100%;
+   width: 1px;
+   background-color: var(--secondaryColor);
+   top: 0;
+   left: 0;
+   z-index: 55;
+   transform: scaleY(0);
+   transition: .4s;
+}
+#header #topBar .topbar_right ul li::before{
+   content: '';
+   position: absolute;
+   height: 100%;
+   width: 1px;
+   background-color: var(--secondaryColor);
+   top: 0;
+   right: 0;
+   z-index: 55;
+   transform: scaleY(0);
+   transition: .4s;
+}
+#header #topBar .topbar_right ul li:hover:after,
+#header #topBar .topbar_right ul li:hover::before{
+   transform: scaleY(1.3);
+}
+#header #topBar .topbar_right ul li a{
+   position: relative;
+   color: var(--secondaryColor);
+}
+#header #topBar .topbar_right ul li a::after{
+   content: '';
+   position: absolute;
+   height: 1px;
+   width: 100%;
+   background-color: var(--secondaryColor);
+   bottom: 0;
+   left: 0;
+   z-index: 55;
+   transform: scaleX(0);
+   transition: .4s;
+}
+#header #topBar .topbar_right ul li a::before{
+   content: '';
+   position: absolute;
+   height: 1px;
+   width: 100%;
+   background-color: var(--secondaryColor);
+   top: 0;
+   left: 0;
+   z-index: 55;
+   transform: scaleX(0);
+   transition: .4s;
+}
+#header #topBar .topbar_right ul li:hover a:after,
+#header #topBar .topbar_right ul li:hover a::before{
+   transform: scaleX(1.3);
+}
+/* NavBar */
+#header #nav #mainMenu ul li{
+   position: relative;
+   margin: 32px 0px;
+}
+#header #nav #mainMenu ul li::after{
+   content: '';
+   position: absolute;
+   height: 100%;
+   width: 1px;
+   background-color: var(--secondaryColor);
+   top: 0;
+   left: 0;
+   z-index: 55;
+   transform: scaleY(0);
+   transition: .4s;
+}
+#header #nav #mainMenu ul li::before{
+   content: '';
+   position: absolute;
+   height: 100%;
+   width: 1px;
+   background-color: var(--secondaryColor);
+   top: 0;
+   right: 0;
+   z-index: 55;
+   transform: scaleY(0);
+   transition: .4s;
+}
+#header #nav #mainMenu ul li:hover:after,
+#header #nav #mainMenu ul li:hover::before{
+   transform: scaleY(1.3);
+   background-color: var(--primaryColor);
+}
+#header #nav #mainMenu ul li a{
+   position: relative;
+   font-size: 16px;
+   font-weight: 500;
+   color: var(--secondaryColor);
+}
+#header #nav #mainMenu ul li a::after{
+   content: '';
+   position: absolute;
+   height: 1px;
+   width: 100%;
+   background-color: var(--secondaryColor);
+   bottom: 0;
+   left: 0;
+   z-index: 55;
+   transform: scaleX(0);
+   transition: .4s;
+}
+#header #nav #mainMenu ul li a::before{
+   content: '';
+   position: absolute;
+   height: 1px;
+   width: 100%;
+   background-color: var(--secondaryColor);
+   top: 0;
+   left: 0;
+   z-index: 55;
+   transform: scaleX(0);
+   transition: .4s;
+}
+#header #nav #mainMenu ul li:hover a:after,
+#header #nav #mainMenu ul li:hover a::before{
+   transform: scaleX(1.3);
+   background-color: var(--primaryColor);
+}
+#header #nav #mainMenu ul li a:hover{
+   color: var(--primaryColor);
+}
+/* Header Section CSS End */
+
+/* Banner Section CSS Start */
+#banner .bannerSlider .bannerSlider_item{
+   height: 700px;
+   background-position: center !important;
+   background-size: cover !important;
+   position: relative;
+   z-index: 1;
+}
+#banner .bannerSlider .bannerSlider_item::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0.60;
+    background-color: var(--secondaryColor);
+    z-index: -1;
+}
+#banner .bannerSlider .bannerSlider_item .container h1{
+   font-size: 35px;
+   font-weight: 500;
+   color: var(--primaryWhite);
+}
+#banner .bannerSlider .bannerSlider_item .container h1 span{
+   color: var(--primaryColor);
+}
+#banner .bannerSlider .bannerSlider_item .container p{
+   font-size: 14px;
+   color: var(--secondaryWhite);
+   padding: 30px 0px 60px 0px;
+   text-align: justify;
+}
+#banner .bannerSlider .bannerSlider_item .container a{
+   color: var(--primaryWhite);
+   font-size: 16px;
+   font-weight: 500;
+   text-transform: uppercase;
+   border: 1px solid var(--primaryWhite);
+   border-bottom: none;
+   padding: 17px 19px;
+   margin-right: 30px;
+   transition: .5s;
+}
+#banner .bannerSlider .bannerSlider_item .container a:hover{
+   background-color: var(--primaryColor);
+   color: var(--secondaryColor);
+   border: none;
+}
+#banner .banner_slider{
+   position: relative;
+}
+#banner .banner_slider_icon{
+   width: 40px;
+   height: 40px;
+   font-size: 30px;
+   color: var(--primaryWhite);
+   text-align: center;
+   line-height: 40px;
+   cursor: pointer;
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   z-index: 99;
+   transition: .5s;
+}
+#banner .banner_slider_icon.fa-chevron-left{
+   left: 20px;
+}
+#banner .banner_slider_icon.fa-chevron-right{
+   right: 20px;
+}
+#banner .banner_slider_icon:hover{
+   color: var(--primaryColor);
+}
+/* #banner .banner_slider_icon.fa-chevron-left::after{
+   content: '';
+   position: absolute;
+   height: 1px;
+   width: 100%;
+   background-color: red;
+   bottom: 0;
+   left: 0;
+   z-index: 55;
+   transform: scaleX(1.2);
+}
+#banner .banner_slider_icon.fa-chevron-left::before{
+   content: '';
+   position: absolute;
+   height: 1px;
+   width: 100%;
+   background-color: red;
+   top: 0;
+   left: 0;
+   z-index: 55;
+   transform: scaleX(1.2);
+} */
+/* Banner Section CSS End */
+
+/* Service Section CSS Start */
+#service{
+   padding-top: 80px;
+}
+#service .container .section_heading h2{
+   font-size: 35px;
+   font-weight: 300;
+}
+#service .container .section_heading P{
+   font-size: 16px;
+   color: var(--textColor);
+   letter-spacing: 1px;
+   padding: 25px 0px 25px 0px;
+}
+/* Service Section CSS End */
